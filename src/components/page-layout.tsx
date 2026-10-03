@@ -78,7 +78,8 @@ export const PageLayout = ({ children, pageContext, location, path }) => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Filip Mareš",
-    jobTitle: "Full-stack web developer",
+    jobTitle: "Engineering Lead",
+    worksFor: { "@type": "Organization", name: "SessionM" },
     description: siteMetadata.description,
     url: `${siteUrl}/`,
     image: `${siteUrl}${OG_IMAGE_PATH}`,
@@ -86,7 +87,7 @@ export const PageLayout = ({ children, pageContext, location, path }) => {
     telephone: "+420777116630",
     sameAs: [
       "https://github.com/etylsarin",
-      "https://www.linkedin.com/in/filipmares1",
+      "https://www.linkedin.com/in/filipmares1/",
     ],
   }
 
@@ -120,7 +121,7 @@ export const PageLayout = ({ children, pageContext, location, path }) => {
       <div className={styles.page}>
         <header className={styles.header}>
           <h1>
-            <a href="/">Filip Mareš</a> // web developer
+            <a href="/">Filip Mareš</a> // engineering lead
           </h1>
           <nav className={styles.navigation}>
             <ul>
