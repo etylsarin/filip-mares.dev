@@ -1,5 +1,5 @@
 const pkg = require("./package.json")
-const DESC = `Full stack web developer with a high level of industry knowledge and over 20 years experience in creating fast, standards-compliant, accessible websites and web applications using current best practices.`
+const DESC = `Engineering lead focused on AI tooling and developer experience. Creator of OpenCastle (open source). 25+ years of building web apps for enterprise clients.`
 
 module.exports = {
   siteMetadata: {
