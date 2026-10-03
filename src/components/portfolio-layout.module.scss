@@ -2,6 +2,10 @@
 
 $portfolio-height: 132px;
 
+// Below this width the screenshot and the text no longer fit side by side,
+// so the text goes under the screenshot.
+$portfolio-stacked: 900px;
+
 .portfolio {
   > header {
     > p {
@@ -42,6 +46,23 @@ main > .portfolio {
   .content {
     grid-area: content;
   }
+
+  @media (max-width: $portfolio-stacked) {
+    display: block;
+
+    > header > h1 {
+      font-size: 30px;
+      line-height: 1.2em;
+    }
+
+    > figure {
+      margin-bottom: 20px;
+    }
+
+    .content a {
+      overflow-wrap: anywhere;
+    }
+  }
 }
 
 .link {
@@ -70,6 +91,23 @@ main > .portfolio {
         color: #85144b;
       }
     }
+
+    @media (max-width: $portfolio-stacked) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      height: auto;
+      margin-bottom: 40px;
+
+      > header {
+        margin-top: 12px;
+
+        > h1 {
+          font-size: 22px;
+          line-height: 1.3em;
+        }
+      }
+    }
   }
 
   figure {
@@ -77,6 +115,16 @@ main > .portfolio {
     left: 0;
     top: 0;
     background: #111;
+
+    // The same strip of the screenshot as on a wide screen, in the flow of the
+    // page, with the title and description under it.
+    @media (max-width: $portfolio-stacked) {
+      position: relative;
+      order: -1;
+      max-width: 550px;
+      height: $portfolio-height;
+      overflow: hidden;
+    }
 
     &::after {
       content: "View the project";
