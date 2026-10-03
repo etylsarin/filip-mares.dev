@@ -1,0 +1,27 @@
+---
+title: "OpenCastle"
+desc: "Open-source CLI that gives a team one shared, policy-checked configuration for seven AI coding assistants"
+category: "open source"
+year: "2026 - now"
+url: "https://www.opencastle.dev/"
+images:
+  - "../../images/portfolio/opencastle-website.png"
+---
+
+## Goal of the project
+
+To make AI coding assistants a dependable part of how a team ships, rather than a personal trick. Every assistant reads its own config format, so a team's instructions end up scattered across several files that say almost the same thing and drift apart.
+
+## Description of the solution
+
+OpenCastle is an open-source CLI written in TypeScript, published on npm under the MIT licence. A team writes its AI assistant config once (instructions, agents, skills, commands and MCP servers) and OpenCastle compiles it for Claude Code, GitHub Copilot, Cursor, Windsurf, OpenCode, Codex and Antigravity.
+
+It treats that config as part of the engineering standard:
+
+- shared baselines published as npm packages, so one standard reaches every repository
+- a policy that can only tighten: MCP server allowlists, pinned versions, no inline credentials
+- a lock file and a CI check that fails the pull request when generated config drifts from its source
+
+## My work on this project
+
+I created OpenCastle and have maintained it since February 2026. The source, with 2,000+ automated tests, is on [GitHub](https://github.com/monkilabs/opencastle).
