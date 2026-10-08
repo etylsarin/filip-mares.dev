@@ -76,6 +76,9 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 550,
+              // The only Markdown image is the portrait at the top of the
+              // homepage, its largest paint; lazy-loading delayed it.
+              loading: "eager",
             },
           },
         ],
