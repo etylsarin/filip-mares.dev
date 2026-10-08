@@ -121,7 +121,11 @@ export const PageLayout = ({ children, pageContext, location, path }) => {
       <div className={styles.page}>
         <header className={styles.header}>
           <h1>
-            <a href="/">Filip Mareš</a> // engineering lead
+            {/* One link for the whole line: a link inside a run of text that
+                differs from it only by colour fails WCAG 1.4.1. */}
+            <a href="/" className={styles.home}>
+              Filip Mareš <span>// engineering lead</span>
+            </a>
           </h1>
           <nav className={styles.navigation}>
             <ul>

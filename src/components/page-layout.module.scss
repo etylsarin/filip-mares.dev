@@ -41,6 +41,13 @@ a {
   }
 }
 
+// A link inside a sentence must stand out by more than its colour
+// (WCAG 1.4.1), so prose links keep their underline.
+main p a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 hr {
   border: 0;
   border-top: 1px solid #ddd;
@@ -85,6 +92,12 @@ $header-stacked: 520px;
   > h1 {
     font-size: 20px;
     margin-left: 20px;
+  }
+
+  // The name keeps the link colour and the role keeps the text colour, as
+  // when only the name was a link.
+  .home > span {
+    color: #111;
   }
 
   @media (max-width: $header-stacked) {
